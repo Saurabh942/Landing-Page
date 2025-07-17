@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LunaLaunch - Your Space Awaits</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0c10;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* Starfield background animation */
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      animation: moveStars 100s linear infinite;
+    }
+
+    .stars {
+      background: url('https://i.imgur.com/E6pWBtF.png');
+      z-index: 0;
+    }
+
+    .stars2 {
+      background: url('https://i.imgur.com/E6pWBtF.png');
+      animation-duration: 200s;
+      z-index: 1;
+    }
+
+    .stars3 {
+      background: url('https://i.imgur.com/E6pWBtF.png');
+      animation-duration: 300s;
+      z-index: 2;
+    }
+
+    @keyframes moveStars {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-1000px); }
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 1.5em;
+    }
+
+    .cta-button {
+      background: #00c6ff;
+      border: none;
+      padding: 0.8em 2em;
+      color: white;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #0072ff;
+    }
+
+    /* Optional: subtle floating effect */
+    .hero {
+      animation: float 10s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Starfield layers -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Hero content -->
+  <section class="hero">
+    <h1>Welcome to LunaLaunch</h1>
+    <p>Where luxury meets zero gravity. Leave Earth behind and embrace the cosmos — your next vacation is written in the stars.</p>
+    <button class="cta-button">Reserve Your Seat</button>
+  </section>
+
+</body>
+</html>
